@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "test-kotlin-mod",
+	"version": "${version}",
+	"name": "Test Kotlin Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"ilovapples"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/ilovapples/test-kotlin-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/test-kotlin-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.apples.testkotlinmod.TestMod",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.apples.testkotlinmod.TestModClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"test-kotlin-mod.mixins.json",
+		{
+			"config": "test-kotlin-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.8.21"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
